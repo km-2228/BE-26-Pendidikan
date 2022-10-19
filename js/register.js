@@ -43,8 +43,6 @@ async function registerAccount(username="",email="",password=""){
     })
 
     const content = await resAPI.json();
-    
-    console.log(content);
 }
 
 document.getElementById("daftar-akun").addEventListener("click", async (e) => {

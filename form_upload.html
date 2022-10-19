@@ -57,7 +57,7 @@
 
                 <div class="input-group mb-2">
                     <label class="input-group-text" for="inputGroupSelect01">Jenis Kelamin</label>
-                    <select id="jk-user" class="form-select" id="inputGroupSelect01">
+                    <select id="jk-user" class="form-select">
                       <option value="Pria">Pria</option>
                       <option value="Wanita">Wanita</option>
                     </select>
@@ -65,17 +65,22 @@
 
                 <div class="input-group mb-2">
                   <span class="input-group-text" id="basic-addon1">Tanggal lahir</span>
-                  <input type="text" id="tanggal-user" class="date form-control" placeholder="Atur tanggal" aria-label="Nilai akhir" aria-describedby="basic-addon1">
+                  <input type="text" id="tanggal-user" class="date form-control" placeholder="Atur tanggal" aria-label="Tanggal lahir" aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-2">
                     <span class="input-group-text" id="basic-addon1">Tempat lahir</span>
-                    <input type="text" id="tempat-user" class="form-control" placeholder="Masukan umur" aria-label="Umur" aria-describedby="basic-addon1">
+                    <input type="text" id="tempat-user" class="form-control" placeholder="Masukan umur" aria-label="Tempat lahir" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-2">
+                  <span class="input-group-text" id="basic-addon1">Alamat</span>
+                  <input type="text" id="alamat-user" class="form-control" placeholder="Masukan alamat" aria-label="Alamat" aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-2">
                   <span class="input-group-text" id="basic-addon1">NISN</span>
-                  <input type="text" id="nisn-user"  class="form-control" placeholder="Masukan NISN anda" aria-label="Asal sekolah" aria-describedby="basic-addon1">
+                  <input type="text" id="nisn-user"  class="form-control" placeholder="Masukan NISN anda" aria-label="NISN" aria-describedby="basic-addon1">
               </div>
 
                 <div class="input-group mb-2">
@@ -93,12 +98,13 @@
                     <input type="number" id="nilai-user" class="form-control" placeholder="Masukan nilai akhir" aria-label="Nilai akhir" aria-describedby="basic-addon1">
                 </div>
                 
-                <button type="submit" class="w-100 btn btn-dark mt-2 mb-2">Daftar</button>
+                <button type="submit" class="w-100 btn btn-dark mt-2 mb-2" id="daftar-form">Daftar</button>
             </form>
         </div>
     </div>
 
     <script src="./js/logout.js"></script>
+    <script src="./js/form.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script type="text/javascript">
       $(".date").datepicker({
