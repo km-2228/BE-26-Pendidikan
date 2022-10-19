@@ -3,7 +3,7 @@ var dataUser = JSON.parse(sessionStorage.getItem("users"));
 
 document.addEventListener("DOMContentLoaded",async function(event) { 
     // mengambil data lama
-    let res = await getDataForm(dataUser.id);
+    let res = await getDataByID(dataUser.id);
     let dataAkun = await res.json();
     
     // Menerapkan inputan data lama
@@ -21,11 +21,7 @@ document.addEventListener("DOMContentLoaded",async function(event) {
 });
 
 // mengambil data lama
-async function getDataForm(id){
-    let url = "https://635008f878563c1d82b707aa.mockapi.io/user/"+id
-    let res = await fetch(url)
-    return res;
-}
+
 
 // update data
 async function updateForm(id, nama,jk,tanggal,tempat,alamat,nisn,sekolah,wali,nilai){

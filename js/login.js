@@ -16,11 +16,11 @@ async function loginAccount(email="",password=""){
     if(dataUser.length < 1){
         alert("Akun tidak ditemukan");
     }else{
-        if(newPass == dataUser.password){
+        if(newPass == dataUser[0].password){
             let data = {
-                id:e.id,
-                email:e.email,
-                username:e.username
+                id:dataUser[0].id,
+                email:dataUser[0].email,
+                username:dataUser[0].username
             }
             
             sessionStorage.setItem("users",JSON.stringify(data));
