@@ -11,22 +11,24 @@ async function loginAccount(email="",password=""){
     let url = "https://635008f878563c1d82b707aa.mockapi.io/user/";
     let newPass = hashPassword(password);
     
-    let res = await fetch(url);
-    let result = await res.json();
-    result.forEach(e => {
-        if(e.email == email && e.password == newPass){
+    let dataUser = await getDataByEmail(email);
+
+    if(dataUser.length < 1){
+        alert("Akun tidak ditemukan");
+    }else{
+        if(newPass == dataUser.password){
             let data = {
                 id:e.id,
                 email:e.email,
                 username:e.username
             }
+            
             sessionStorage.setItem("users",JSON.stringify(data));
-            alert("Login berhasil");
             window.location.href = "./home_user.html";
-        }else if(e.email == email){
-            alert("Password salah");
+        }else{
+            alert("Password salah!")
         }
-    });
+    }
 }
 
 document.getElementById("login-akun").addEventListener("click", async (e) => {

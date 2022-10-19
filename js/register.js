@@ -7,42 +7,48 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 async function registerAccount(username="",email="",password=""){
-    let url = "https://635008f878563c1d82b707aa.mockapi.io/user";
-    let newPass = hashPassword(password);
-    let dataAccount = {
-        "nama": "",
-        "username": username,
-        "email": email,
-        "password": newPass,
-        "asal_sekolah": "",
-        "nilai": 0,
-        "alamat": "",
-        "jenis_kelamin": "",
-        "nisn": "",
-        "nama_wali": "",
-        "tempat": "",
-        "tanggal_lahir": 00000000,
-        "status_pendaftaran": "",
-        "id": ""
-       }
-    
-    const resAPI = await fetch(url, {
-        method: 'POST',
-        headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dataAccount)
-    })
-    .then(res=>{
-        alert("berhasil membuat akun!");
-        window.location.href = "./index.html";
-    })
-    .catch(err=>{
-        alert("terjadi error dalam membuat akun!");
-    })
+    let checkAkun = await getDataByEmail(email);
+    if(checkAkun.length < 1){
+        let url = "https://635008f878563c1d82b707aa.mockapi.io/user";
+        let newPass = hashPassword(password);
+        let dataAccount = {
+            "nama": "",
+            "username": username,
+            "email": email,
+            "password": newPass,
+            "asal_sekolah": "",
+            "nilai": 0,
+            "alamat": "",
+            "jenis_kelamin": "",
+            "nisn": "",
+            "nama_wali": "",
+            "tempat": "",
+            "tanggal_lahir": 00000000,
+            "status_pendaftaran": "",
+            "id": ""
+        }
+        
+        const resAPI = await fetch(url, {
+            method: 'POST',
+            headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataAccount)
+        })
+        .then(res=>{
+            alert("berhasil membuat akun!");
+            window.location.href = "./index.html";
+        })
+        .catch(err=>{
+            alert("terjadi error dalam membuat akun!");
+        })
 
-    const content = await resAPI.json();
+        const content = await resAPI.json();
+    }else{
+        alert("Akun sudah di daftarkan!");
+        window.location.href = "./index.html";
+    }
 }
 
 document.getElementById("daftar-akun").addEventListener("click", async (e) => {
