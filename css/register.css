@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+
+#card-registrasi {
+    margin-top: 50px;
+    width: 50%;
+    height: max-content;
+}
+
+label {
+    padding-bottom: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+}
