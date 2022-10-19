@@ -10,10 +10,18 @@
     height: max-content;
 }
 
+h2 {
+    text-align: center;
+}
+
 label {
     padding-bottom: 10px;
 }
 
 input {
     margin-bottom: 10px;
+}
+
+.button {
+    width: 200px;
 }
