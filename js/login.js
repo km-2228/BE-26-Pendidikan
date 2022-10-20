@@ -1,6 +1,6 @@
 // check apakah sudah login atau tidak?
 document.addEventListener("DOMContentLoaded", function(event) { 
-    let data = JSON.parse(sessionStorage.getItem("users"));
+    let data = JSON.parse(localStorage.getItem("users"));
     if(data != null){
         window.location.href = "./home_user.html";
     }
@@ -23,7 +23,7 @@ async function loginAccount(email="",password=""){
                 username:dataUser[0].username
             }
             
-            sessionStorage.setItem("users",JSON.stringify(data));
+            localStorage.setItem("users",JSON.stringify(data));
             window.location.href = "./home_user.html";
         }else{
             alert("Password salah!")

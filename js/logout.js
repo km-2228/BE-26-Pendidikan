@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
-    let data = JSON.parse(sessionStorage.getItem("users"));
+    let data = JSON.parse(localStorage.getItem("users"));
     if(data == null){
         window.location.href = "./index.html";
     }
@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 async function logout(){
-    sessionStorage.removeItem("users");
+    localStorage.removeItem("users");
     window.location.href = "./index.html";
 }

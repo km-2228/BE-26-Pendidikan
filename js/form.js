@@ -1,5 +1,5 @@
 // check apakah sudah login atau tidak?
-var dataUser = JSON.parse(sessionStorage.getItem("users"));
+var dataUser = JSON.parse(localStorage.getItem("users"));
 
 document.addEventListener("DOMContentLoaded",async function(event) { 
     // mengambil data lama
