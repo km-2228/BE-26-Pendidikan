@@ -21,6 +21,15 @@ async function tampilProfile() {
     document.getElementById("email").value = res.email;
     document.getElementById("nilai").value = res.nilai;
     document.getElementById("nama_wali").value = res.nama_wali;
+
+    let status = document.getElementById("status_pendaftaran")
+    status.value = res.status_pendaftaran.toUpperCase();
+    if(res.status_pendaftaran == "diterima"){
+        status.style.background = "green";
+    }else{
+        status.style.background = "red";
+    }
+
     
     console.log(res)
 }
