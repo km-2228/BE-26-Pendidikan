@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/profile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Profile</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -38,9 +38,43 @@
           </div>
         </div>
       </nav>
-    
-      <script src="./js/logout.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      
+      <div class="container d-flex justify-content-center mt-5">
+        <div class="position-relative align-self-center p-5 form-input bg-dark text-white p-4" style="border-radius: 5px; width: 50%;">
+              <h2 class="mb-3">Profile</h2>
+              <form>
+                  <div class="form-group mb-2">
+                      <label for="exampleInputEmail1" class="mb-2">Username</label>
+                      <input type="text" class="form-control" id="username" aria-describedby="username" disabled>
+                    </div>
+                    <div class="form-group mb-2">
+                      <label for="exampleInputPassword1" class="mb-2">NISN</label>
+                      <input type="text" class="form-control" id="nisn" disabled>
+                    </div>
+                    <div class="form-group mb-2">
+                      <label for="exampleInputPassword1" class="mb-2">Nilai</label>
+                      <input type="text" class="form-control" id="nilai" disabled>
+                    </div>
+                  <div class="form-group mb-2">
+                    <label for="exampleInputEmail1" class="mb-2">Email</label>
+                    <input type="text" class="form-control" id="email" aria-describedby="emailHelp" disabled>
+                  </div>
+                  <div class="form-group mb-2">
+                    <label for="exampleInputPassword1" class="mb-2">Nama Wali</label>
+                    <input type="text" class="form-control" id="nama_wali" disabled>
+                  </div>
+                  <div class="form-group mb-2">
+                    <label for="exampleInputPassword1" class="mb-2">Status Pendaftaran</label>
+                    <input type="text" class="form-control" id="nama_wali" disabled>
+                  </div>
+                </form>
+      </div>
+  </div>
+  <script src="./js/data.js"></script>
+  <script src="./js/profile.js"></script>
+  <script src="./js/logout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     
     document.getElementById("usernameDisplay").innerHTML = data.username;
-    console.log(data)
+    // console.log(data)
 });
 
 async function logout(){

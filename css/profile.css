@@ -13,3 +13,11 @@
     max-width: 500px;
     margin: 10px;
 }
+
+
+
+#card-registrasi {
+    margin-top: 50px;
+    width: 50%;
+    height: max-content;
+}
