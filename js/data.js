@@ -16,6 +16,16 @@ async function getDataByID(id){
     return res;
 }
 
+async function getAllData(){
+    let url = "https://635008f878563c1d82b707aa.mockapi.io/user/"
+    let res = await fetch(url)
+    let hasil = await res.json()
+
+    // console.log(hasil);
+    return hasil;
+}
+
+
 function hashPassword(password) {
     let hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
     hashObj.update(password);
