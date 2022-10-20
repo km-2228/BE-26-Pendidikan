@@ -1,0 +1,15 @@
+.nav-link:hover {
+    background-color: grey;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: block;
+    max-width: 500px;
+    margin: 10px;
+}
