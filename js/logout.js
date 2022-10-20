@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if(data == null){
         window.location.href = "./index.html";
     }
-    console.log(data);
+    
+    document.getElementById("usernameDisplay").innerHTML = data.username;
 });
 
 async function logout(){
