@@ -12,32 +12,32 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="home_user.html">SMP 1 CIKADAP</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home_user.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="form_upload.html">Daftar PPDB</a>
-              </li>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home_user.html">SMP 1 CIKADAP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home_user.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="form_upload.html">Daftar PPDB</a>
+            </li>
+          </ul>
+          <div class="dropdown d-flex me-5">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hi! <span id="usernameDisplay"></span></span></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="index.html">Login</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#" onclick="logout()">Log Out</a></li>
             </ul>
-            <div class="dropdown d-flex me-5">
-              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hi! <span id="usernameDisplay"></span></span></a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                <li><a class="dropdown-item" href="index.html">Login</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#" onclick="logout()">Log Out</a></li>
-              </ul>
-            </div>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
       
       <div class="container d-flex justify-content-center mt-5">
@@ -71,9 +71,9 @@
                 </form>
       </div>
   </div>
+  <script src="./js/logout.js"></script>
   <script src="./js/data.js"></script>
   <script src="./js/profile.js"></script>
-  <script src="./js/logout.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

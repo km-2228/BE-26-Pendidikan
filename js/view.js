@@ -3,7 +3,7 @@ async function showAll(){
     let data = await getAllData();
 
     data.forEach(element => {
-        if(element.nisn != "" && element.status_pendaftaran == "true"){
+        if(element.nisn != "" && element.status_pendaftaran == "Sedang Diseleksi"){
             document.getElementById("data-siswa").innerHTML += `<tr>
             <th scope="row">${element.id}</th>
             <td>${element.nama}</td>
@@ -50,7 +50,7 @@ async function terimaSiswa(id){
 async function tolakSiswa(id){
     let url = "https://635008f878563c1d82b707aa.mockapi.io/user/"+id;
     let dataAccount = {
-        "status_pendaftaran": "ditolak"
+        "status_pendaftaran": "ditolak nice try"
     }
     
     const resAPI = await fetch(url, {

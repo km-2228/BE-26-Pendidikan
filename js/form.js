@@ -36,7 +36,7 @@ async function updateForm(id, nama,jk,tanggal,tempat,alamat,nisn,sekolah,wali,ni
         "nama_wali": wali,
         "tempat": tempat,
         "tanggal_lahir": tanggal,
-        "status_pendaftaran": "true"
+        "status_pendaftaran": "Sedang Diseleksi"
        }
     
     const resAPI = await fetch(url, {
