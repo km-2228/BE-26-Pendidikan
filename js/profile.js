@@ -5,10 +5,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if(data == null){
         window.location.href = "./index.html";
     }
-    
-
-   
-
 });
 
 async function tampilProfile() {

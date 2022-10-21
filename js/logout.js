@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if(data == null){
         window.location.href = "./index.html";
     }
-    if(isAdmin){
+    if(isAdmin()){
         window.location.href = "./view_data.html";
     }
     
