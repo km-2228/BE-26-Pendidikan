@@ -8,9 +8,10 @@ async function getDataByEmail(email=""){
     });
 
     return filter;
+    // hasilnya menggunakan array
 }
 
-async function getDataByID(id){
+async function getDataByID(id=""){
     let url = "https://635008f878563c1d82b707aa.mockapi.io/user/"+id
     let res = await fetch(url)
     return res;
@@ -23,6 +24,33 @@ async function getAllData(){
 
     // console.log(hasil);
     return hasil;
+}
+
+function isAdmin(){
+    let checkAdmin = JSON.parse(localStorage.getItem("admin"))
+    if(checkAdmin != null){
+        if(checkAdmin.role == "admin"){
+            hasil = true;
+        }else{
+            hasil = false;
+        }
+    }else{
+        hasil = false;
+    }
+
+    return hasil
+}
+
+async function getAdminByEmail(email=""){
+    let url = "https://635008f878563c1d82b707aa.mockapi.io/admin/";
+    
+    let res = await fetch(url);
+    let result = await res.json();
+    let filter = result.filter(item => {
+        return item.email == email;
+    });
+
+    return filter;
 }
 
 
