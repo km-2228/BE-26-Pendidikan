@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if(data == null){
         window.location.href = "./index.html";
     }
+    if(isAdmin){
+        window.location.href = "./view_data.html";
+    }
     
     document.getElementById("usernameDisplay").innerHTML = data.username;
     // console.log(data)

@@ -31,7 +31,7 @@ async function tampilProfile() {
     }
 
     
-    console.log(res)
+    // console.log(res)
 }
 
 tampilProfile()

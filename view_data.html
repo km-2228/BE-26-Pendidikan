@@ -32,7 +32,7 @@
               <li><a class="dropdown-item" href="#">Profile Sekolah</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Log Out</a></li>
+              <li><a class="dropdown-item" href="#" onclick="logout()">Log Out</a></li>
             </ul>
           </div>
         </div>
@@ -114,6 +114,15 @@
     </div>
     
     <script src="./js/data.js"></script>
+    <script>
+      if(!isAdmin()){
+        window.location.href="./home_user.html";
+      }
+      function logout(){
+          localStorage.removeItem("admin");
+          window.location.href = "./index.html";
+      }
+    </script>
     <script src="./js/view.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
