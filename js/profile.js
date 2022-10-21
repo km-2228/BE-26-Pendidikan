@@ -22,12 +22,17 @@ async function tampilProfile() {
     status.value = res.status_pendaftaran.toUpperCase();
     if(res.status_pendaftaran == "diterima"){
         status.style.background = "green";
-    }else{
+    }
+    else if(res.status_pendaftaran == "ditolak nice try"){
         status.style.background = "red";
+    }
+    else {
+        status.style.background = "yellow";
+        status.style.color = "black";
     }
 
     
-    // console.log(res)
+    console.log(res)
 }
 
 tampilProfile()
