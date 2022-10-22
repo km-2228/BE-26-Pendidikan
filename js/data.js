@@ -18,6 +18,13 @@ function disableButton(){
     }
 }
 
+function enableButton(){
+    const buttons = document.getElementsByTagName("button");
+    for (const button of buttons) {
+        button.disabled = false;
+    }
+}
+
 async function getDataByID(id=""){
     let url = "https://635008f878563c1d82b707aa.mockapi.io/user/"+id
     let res = await fetch(url)

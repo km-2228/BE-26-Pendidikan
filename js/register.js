@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 async function registerAccount(username="",email="",password=""){
+    disableButton()
     let checkAkun = await getDataByEmail(email);
     if(checkAkun.length < 1){
         let url = "https://635008f878563c1d82b707aa.mockapi.io/user";
@@ -42,6 +43,7 @@ async function registerAccount(username="",email="",password=""){
         })
         .catch(err=>{
             alert("terjadi error dalam membuat akun!");
+            enableButton();
         })
 
         const content = await resAPI.json();

@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 async function loginAccount(email="",password=""){
+    disableButton()
     let url = "https://635008f878563c1d82b707aa.mockapi.io/user/";
     let newPass = hashPassword(password);
 
@@ -20,6 +21,7 @@ async function loginAccount(email="",password=""){
 
         if(dataUser.length < 1){
             alert("Akun tidak ditemukan");
+            enableButton();
         }else{
             if(newPass == dataUser[0].password){
                 let data = {
@@ -32,6 +34,7 @@ async function loginAccount(email="",password=""){
                 window.location.href = "./home_user.html";
             }else{
                 alert("Password salah!")
+                enableButton();
             }
         }
     }else{
@@ -48,6 +51,7 @@ async function loginAccount(email="",password=""){
         }else{
             
             alert("Akun tidak ditemukan");
+            enableButton();
         }
     }
 }
