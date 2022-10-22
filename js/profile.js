@@ -1,9 +1,16 @@
 var data = JSON.parse(localStorage.getItem("users"));
 
 
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", async function(event) { 
     if(data == null){
         window.location.href = "./index.html";
+    }
+    let res = await getDataByID(data.id);
+    let dataAkun = await res.json();
+    // console.log(dataAkun.status_pendaftaran);
+    if(dataAkun.status_pendaftaran == ""){
+        alert("Mohon untuk mengisi form daftar PPDB Terlebih dahulu!");
+        window.location.href = "./form_upload.html";
     }
 });
 
@@ -32,7 +39,7 @@ async function tampilProfile() {
     }
 
     
-    console.log(res)
+    // console.log(res)
 }
 
 tampilProfile()

@@ -36,8 +36,30 @@
     </nav>
 
 
-      <!-- Table -->
+      <!-- Table belum diseleksi -->
       <div class="table-responsive">
+        <h3 class="mb-3 container">Daftar peserta yang belum diseleksi!</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Nama</th>
+              <th scope="col">NISN</th>
+              <th scope="col">Alamat</th>
+              <th scope="col">Sekolah</th>
+              <th scope="col">Nama wali</th>
+              <th scope="col">Nilai</th>
+              <th scope="col">Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="data-siswa">
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Table yang lolos seleksi -->
+    <div class="table-responsive mt-5">
+      <h3 class="mb-3 container">Daftar peserta yang lolos seleksi!</h3>
       <table class="table">
         <thead>
           <tr>
@@ -51,63 +73,31 @@
             <th scope="col">Aksi</th>
           </tr>
         </thead>
-        <tbody id="data-siswa">
-          <!-- <tr>
-            <th scope="row">1</th>
-            <td>Joni</td>
-            <td>11111</td>
-            <td>Depok</td>
-            <td>SMP TRD</td>
-            <td>Sukijan</td>
-            <td>87,2</td>
-            <td>
-              <button type="button" class="btn btn-success">Terima</button>
-              <button type="button" class="btn btn-danger">Tolak</button>
-            </td>
-
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Doni</td>
-            <td>22222</td>
-            <td>Bogor</td>
-            <td>SMPN 1 Bogor</td>
-            <td>Sumanto</td>
-            <td>69,69</td>
-            <td>
-              <button type="button" class="btn btn-success">Terima</button>
-              <button type="button" class="btn btn-danger">Tolak</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>33333</td>
-            <td>Bikini Bottom</td>
-            <td>Goo Lagoon</td>
-            <td>Suprapto</td>
-            <td>77,77</td>
-            <td>
-              <button type="button" class="btn btn-success">Terima</button>
-              <button type="button" class="btn btn-danger">Tolak</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Sangkuriang</td>
-            <td>44444</td>
-            <td>Baon Cikadap</td>
-            <td>SMPN 1 Ghaib</td>
-            <td>Sudiro</td>
-            <td>99,99</td>
-            <td>
-              <button type="button" class="btn btn-success">Terima</button>
-              <button type="button" class="btn btn-danger">Tolak</button>
-            </td>
-          </tr> -->
+        <tbody id="data-siswa-diterima">
         </tbody>
-      </table>
-    </div>
+    </table>
+  </div>
+
+  <!-- Table yang tidak lolos seleksi -->
+  <div class="table-responsive mt-5">
+    <h3 class="mb-3 container">Daftar peserta yang tidak lolos seleksi!</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Nama</th>
+          <th scope="col">NISN</th>
+          <th scope="col">Alamat</th>
+          <th scope="col">Sekolah</th>
+          <th scope="col">Nama wali</th>
+          <th scope="col">Nilai</th>
+          <th scope="col">Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="data-siswa-ditolak">
+    </tbody>
+  </table>
+</div>
     
     <script src="./js/data.js"></script>
     <script>
