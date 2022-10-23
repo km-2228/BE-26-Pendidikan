@@ -30,7 +30,7 @@ async function tampilProfile() {
     if(res.status_pendaftaran == "diterima"){
         status.style.background = "green";
     }
-    else if(res.status_pendaftaran == "ditolak nice try"){
+    else if(res.status_pendaftaran == "ditolak"){
         status.style.background = "red";
     }
     else {
